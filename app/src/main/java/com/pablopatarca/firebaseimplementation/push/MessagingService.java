@@ -11,7 +11,7 @@ import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.pablopatarca.firebaseimplementation.MainActivity;
+import com.pablopatarca.firebaseimplementation.activities.MainActivity;
 import com.pablopatarca.firebaseimplementation.R;
 
 /**
