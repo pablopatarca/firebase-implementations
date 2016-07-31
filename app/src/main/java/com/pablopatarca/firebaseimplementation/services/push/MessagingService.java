@@ -1,4 +1,4 @@
-package com.pablopatarca.firebaseimplementation.push;
+package com.pablopatarca.firebaseimplementation.services.push;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;

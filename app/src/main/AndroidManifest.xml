@@ -29,7 +29,7 @@
         </activity>
 
         <service
-            android:name=".push.MessagingService">
+            android:name=".services.push.MessagingService">
 
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -37,7 +37,7 @@
         </service>
 
         <service
-            android:name=".push.MessagingInstanceIDService">
+            android:name=".services.push.MessagingInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>

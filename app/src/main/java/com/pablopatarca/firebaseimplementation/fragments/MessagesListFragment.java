@@ -17,6 +17,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.pablopatarca.firebaseimplementation.BuildConfig;
 import com.pablopatarca.firebaseimplementation.R;
 import com.pablopatarca.firebaseimplementation.adapters.MessagesAdapter;
 import com.pablopatarca.firebaseimplementation.app.AppSettings;
@@ -37,6 +40,7 @@ public class MessagesListFragment extends BaseFragment {
 
     List<Message> mMessages;
     DatabaseReference myDBRef;
+    StorageReference mStorageRef;
 
     public static MessagesListFragment newInstance() {
 
@@ -55,6 +59,11 @@ public class MessagesListFragment extends BaseFragment {
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         myDBRef = database.getReference("messages");
+
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        // Points to the root reference
+        mStorageRef = storage.getReference().child("chat-images");
+
     }
 
     @Nullable
