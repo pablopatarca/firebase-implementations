@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
  */
 public class BaseFragment extends Fragment {
 
+    static final String TAG = "FB Test";
 
     public interface FragmentInteractions {
 
